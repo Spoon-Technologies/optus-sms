@@ -1,5 +1,5 @@
 # optus-sms
-## ============================== SUMMARY =====================================
+## Summary
 
 Program: notify_optus_sms.pl
 Version: 1.0
@@ -8,7 +8,7 @@ Author: Adam Nye / Spoon Technologies
 Summary: This plugin sends SMS alerts with Optus RESTful API
 License: GPLv3
 
-## ============================= SETUP ==========================================
+## Setup
 
 Copy this file to your Nagios plugin folder, then add command definitions as per below.
 
@@ -55,7 +55,7 @@ Define two commands:
       }
 
 
-## ============================= SCRIPT ==========================================
+## Script
 
 Script params description:
 
