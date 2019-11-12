@@ -17,7 +17,7 @@ Optus Setup
 Firstly, this is for the Optus REST API only. You could use the concepts below to
 create something to use with other APIs, but thats out of scope of this script :)
 
-Nagios setup
+### Nagios setup
 
 1. Create the SMS notification commands (commonly found in commands.cfg).
    Replace APIURL with URL of Optus REST API (probably the same URL TBH).
@@ -41,7 +41,7 @@ Define two commands:
       full international format e.g. +61xxxxxxxxx
 
 
-      define contact{
+  define contact{
               contact_name                    engineer
               alias                           Support Engineer
               service_notification_period     24x7
