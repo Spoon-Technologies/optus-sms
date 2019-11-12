@@ -1,5 +1,5 @@
 # optus-sms
-##============================== SUMMARY =====================================
+## ============================== SUMMARY =====================================
 
 Program: notify_optus_sms.pl
 Version: 1.0
@@ -8,7 +8,7 @@ Author: Adam Nye / Spoon Technologies
 Summary: This plugin sends SMS alerts with Optus RESTful API
 License: GPLv3
 
-##============================= SETUP ==========================================
+## ============================= SETUP ==========================================
 
 Copy this file to your Nagios plugin folder, then add command definitions as per below.
 
@@ -25,12 +25,12 @@ Nagios setup
 
 Define two commands:
 
-      define command {
+    define command {
               command_name notify-by-sms
               command_line $USER1$/notify_optus_sms.pl -a 'APIURL' -u 'USER' -p 'PASS' -d '$CONTACTPAGER$' -m "$NOTIFICATIONTYPE$ $SERVICESTATE$ $SERVICEDESC$ Host($HOSTNAME$) Info($SERVICEOUTPUT$) Date($SHORTDATETIME$)"
       }
 
-      define command {
+    define command {
               command_name host-notify-by-sms
               command_line $USER1$/notify_optus_sms.pl -a 'APIURL' -u 'USER' -p 'PASS' -d '$CONTACTPAGER$' -m "$NOTIFICATIONTYPE$ $HOSTSTATE$ Host($HOSTALIAS$) Info($HOSTOUTPUT$) Time($SHORTDATETIME$)"
       }
@@ -55,7 +55,7 @@ Define two commands:
       }
 
 
-##============================= SCRIPT ==========================================
+## ============================= SCRIPT ==========================================
 
 Script params description:
 
