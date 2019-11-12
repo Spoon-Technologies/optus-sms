@@ -30,23 +30,24 @@ create something to use with other APIs, but thats out of scope of this script :
 
 Define two commands:
 
-    define command {
+```
+define command {
               command_name notify-by-sms
               command_line $USER1$/notify_optus_sms.pl -a 'APIURL' -u 'USER' -p 'PASS' -d '$CONTACTPAGER$' -m "$NOTIFICATIONTYPE$ $SERVICESTATE$ $SERVICEDESC$ Host($HOSTNAME$) Info($SERVICEOUTPUT$) Date($SHORTDATETIME$)"
       }
 
-    define command {
+define command {
               command_name host-notify-by-sms
               command_line $USER1$/notify_optus_sms.pl -a 'APIURL' -u 'USER' -p 'PASS' -d '$CONTACTPAGER$' -m "$NOTIFICATIONTYPE$ $HOSTSTATE$ Host($HOSTALIAS$) Info($HOSTOUTPUT$) Time($SHORTDATETIME$)"
-      }
-
+}
+```
 
 2. In your nagios contacts (Commonly found on contacts.cfg) add
     the contact. Field "pager" should contain a mobile number for sms alerts in
       full international format e.g. +61xxxxxxxxx
 
-
-    define contact{
+```
+define contact{
               contact_name                    engineer
               alias                           Support Engineer
               service_notification_period     24x7
@@ -57,8 +58,8 @@ Define two commands:
               host_notification_commands      host-notify-by-email,host-notify-by-sms
               email                           engineer@somedomain.com
               pager                           +61xxxxxxxxx
-    }
-
+}
+```
 
 ## Script
 
