@@ -2,10 +2,15 @@
 ## Summary
 
 Program: notify_optus_sms.pl
+
 Version: 1.0
+
 Date: November 04, 2019
+
 Author: Adam Nye / Spoon Technologies
+
 Summary: This plugin sends SMS alerts with Optus RESTful API
+
 License: GPLv3
 
 ## Setup
@@ -41,7 +46,7 @@ Define two commands:
       full international format e.g. +61xxxxxxxxx
 
 
-  define contact{
+    define contact{
               contact_name                    engineer
               alias                           Support Engineer
               service_notification_period     24x7
@@ -52,7 +57,7 @@ Define two commands:
               host_notification_commands      host-notify-by-email,host-notify-by-sms
               email                           engineer@somedomain.com
               pager                           +61xxxxxxxxx
-      }
+    }
 
 
 ## Script
@@ -60,7 +65,11 @@ Define two commands:
 Script params description:
 
 apiurl = URL of the Optus API gateway (https://api.sms.optus.com.au/rest/gateway/messages)
+
 user = API user
+
 password = API password
+
 dstnumber = Destination mobile number (the number to send SMS to)
+
 msg = The text message body
