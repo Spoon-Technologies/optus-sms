@@ -92,7 +92,7 @@ if(defined($args{help}) || !defined($args{apiURL}) || !defined($args{apiUser}) |
 }
 
 # Define our user agent
-$userAgent->agent("pernixOptusSMS/0.1");
+$userAgent->agent("OptusSMS/0.1");
 
 # Create the request
 my $req = HTTP::Request->new(POST => $args{apiURL});
